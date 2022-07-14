@@ -1,0 +1,13 @@
+
+E
+java:S5411"*Use the primitive boolean expression here.(œÈ•‚þÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Èõ¨ãýÿÿÿÿ
+p
+java:S3008"URename this field "SEQUENCIAL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÐËçßúÿÿÿÿ
+O
+java:S5993"9Change the visibility of this constructor to "protected".(ÇŸðã
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ñ¤´Œ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(è­²¢ûÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(Õ¬¦Þÿÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(…ç…—úÿÿÿÿ
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(À¦§‚ÿÿÿÿÿ
