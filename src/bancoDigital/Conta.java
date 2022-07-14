@@ -9,17 +9,29 @@ public abstract class Conta implements IConta{
     protected double saldo;
     private Cliente cliente;
 
+    protected double limite;
+
 
 
     public Conta(Cliente cliente) {
         this.agencia = Conta.AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
         this.cliente = cliente;
+        this.limite = 1000;
     }
 
     @Override
     public void sacar(double valor){
-        saldo -= valor;
+        if (this.podeSacar(valor)) {
+            saldo -= valor;
+        } else {
+            System.out.println(String.format("O Valor %.2f passou o limite", valor));
+        }
+    }
+
+    private Boolean podeSacar(Double valorASacar){
+        Double valorDisponivelSaque = this.saldo + this.limite;
+        return valorASacar <= valorDisponivelSaque;
     }
 
     @Override
@@ -45,11 +57,19 @@ public abstract class Conta implements IConta{
         return agencia;
     }
 
+    public double getLimite() {
+        return limite;
+    }
+
     public int getNumero() {
         return numero;
     }
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
     }
 }
